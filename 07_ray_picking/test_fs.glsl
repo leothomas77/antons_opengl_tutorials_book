@@ -1,8 +1,8 @@
-#version 410
+#version 130
 
-in float dist;
+float dist;
 uniform float blue = 0.0;
-out vec4 frag_colour;
+vec4 frag_colour;
 
 void main() {
 	frag_colour = vec4 (1.0, 0.0, blue, 1.0);

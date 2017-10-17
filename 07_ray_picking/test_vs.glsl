@@ -1,9 +1,10 @@
-#version 410
+#version 130
 
-layout(location = 0) in vec3 vertex_position;
+//layout(location = 0) attribute vec3 vertex_position;
+attribute vec3 vertex_position;
 uniform mat4 model, view, proj;
 // use z position to shader darker to help perception of distance
-out float dist;
+varying float dist;
 
 void main() {
 	gl_Position = proj * view * model * vec4 (vertex_position, 1.0);
