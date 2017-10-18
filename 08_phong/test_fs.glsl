@@ -1,6 +1,6 @@
-#version 410
+#version 120
 
-in vec3 position_eye, normal_eye;
+ vec3 position_eye, normal_eye;
 
 uniform mat4 view_mat;
 
@@ -16,7 +16,7 @@ vec3 Kd = vec3 (1.0, 0.5, 0.0); // orange diffuse surface reflectance
 vec3 Ka = vec3 (1.0, 1.0, 1.0); // fully reflect ambient light
 float specular_exponent = 100.0; // specular 'power'
 
-out vec4 fragment_colour; // final colour of surface
+vec4 fragment_colour; // final colour of surface
 
 void main () {
 	// ambient intensity
@@ -47,5 +47,5 @@ void main () {
 	vec3 Is = Ls * Ks * specular_factor; // final specular intensity
 	
 	// final colour
-	fragment_colour = vec4 (Is + Id + Ia, 1.0);
+	gl_FragColor = vec4 (Is + Id + Ia, 1.0);
 }

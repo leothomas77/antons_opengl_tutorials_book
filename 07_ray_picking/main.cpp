@@ -128,6 +128,12 @@ void glfw_mouse_click_callback( GLFWwindow *window, int button, int action,
 }
 
 int main() {
+/*	printf("Status: Using GLEW %s\n", glewGetString(GLEW_VERSION));	
+	printf("Opengl Version:  %s\n", glGetString(GL_VERSION));	
+	printf("Opengl Vendor :  %s\n", glGetString(GL_VENDOR));	
+	printf("Opengl Render :  %s\n", glGetString(GL_RENDERER));	
+	printf("Opengl Shading Language Version : %s\n", glGetString(GL_SHADING_LANGUAGE_VERSION));	
+*/
 	/*--------------------------------START
 	 * OPENGL--------------------------------*/
 	restart_gl_log();

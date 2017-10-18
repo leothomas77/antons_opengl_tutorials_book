@@ -1,4 +1,4 @@
-#version 130
+#version 120
 
 //layout(location = 0) attribute vec3 vertex_position;
 attribute vec3 vertex_position;

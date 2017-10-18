@@ -201,6 +201,8 @@ bool create_shader( const char *file_name, GLuint *shader, GLenum type ) {
 	glGetShaderiv( *shader, GL_COMPILE_STATUS, &params );
 	if ( GL_TRUE != params ) {
 		gl_log_err( "ERROR: GL shader index %i did not compile\n", *shader );
+		gl_log_err( "ERROR: Shader filename %s did not compile\n", file_name );
+		
 		print_shader_info_log( *shader );
 		return false; // or exit or something
 	}
